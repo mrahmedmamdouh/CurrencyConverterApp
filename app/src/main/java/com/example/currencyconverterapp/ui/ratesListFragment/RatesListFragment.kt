@@ -5,6 +5,7 @@ import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Observer
+import androidx.navigation.Navigation
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.currencyconverterapp.R
@@ -45,6 +46,9 @@ class RatesListFragment : Fragment(R.layout.fragment_rates_list), RatesCallBack 
     }
 
     override fun onClick(currencyName: String, rateValue: Double) {
-
+        val bundle = Bundle()
+        bundle.putString("currency", currencyName)
+        bundle.putDouble("rate", rateValue)
+        Navigation.findNavController(binding.root).navigate(R.id.action_ratesListFragment_to_convertFragment, bundle)
     }
 }

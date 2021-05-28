@@ -1,5 +1,6 @@
 package com.example.currencyconverterapp.ui.viewmodel
 
+import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -17,7 +18,10 @@ class MainViewModel @Inject constructor(
 
     private val job = SupervisorJob()
     val repositoriesLiveData = MutableLiveData<LatestResponse>()
+    val userInput = MutableLiveData<String>("1.00")
+    val getUserInput: LiveData<String> = userInput
     private val ioScope = CoroutineScope(Dispatchers.IO + job)
+
     init {
         fetchProducts()
     }
