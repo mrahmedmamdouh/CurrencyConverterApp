@@ -1,4 +1,4 @@
-package com.example.currencyconverterapp.repository
+package com.example.currencyconverterapp.data.repository
 
 import com.example.currencyconverterapp.data.model.LatestResponse
 import com.example.currencyconverterapp.requests.ApiInterface

@@ -17,7 +17,7 @@ android {
         targetSdkVersion 30
         versionCode 1
         versionName "1.0"
-
+        vectorDrawables.useSupportLibrary = true
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -28,7 +28,7 @@ android {
             buildConfigField("String", "ACCESS_KEY", "\"948353e93335e2c610f2b89faf64aaec\"")
         }
         release {
-            minifyEnabled false
+            minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
             buildConfigField("String", "BASE_URL", "\"http://data.fixer.io\"")
             buildConfigField("String", "ACCESS_KEY", "\"948353e93335e2c610f2b89faf64aaec\"")
@@ -91,4 +91,6 @@ dependencies {
 
     //For Logging
     implementation 'com.jakewharton.timber:timber:4.7.1'
+    implementation 'com.github.blongho:worldCountryData:1.4'
+    implementation 'com.github.midorikocak:currency-picker-android:1.2.1'
 }

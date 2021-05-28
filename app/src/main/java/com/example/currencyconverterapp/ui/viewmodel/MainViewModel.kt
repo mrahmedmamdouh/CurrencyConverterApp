@@ -1,10 +1,10 @@
-package com.example.currencyconverterapp.ui
+package com.example.currencyconverterapp.ui.viewmodel
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.currencyconverterapp.data.model.LatestResponse
-import com.example.currencyconverterapp.repository.MainRepository
+import com.example.currencyconverterapp.data.repository.MainRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.*
 import timber.log.Timber
